@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Moderate Exam</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+</head>
+<body>
+    <header>
+        <h1>Moderate Exam</h1>
+        <p>Step up your skills with moderately challenging questions.</p>
+    </header>
+
+    <button class="btn" onclick="toggleDarkMode()">Toggle Dark Mode</button>
+
+    <form id="moderateExamForm">
+        <fieldset>
+            <legend>1. What protocol is used to securely transfer files?</legend>
+            <label>
+                <input type="radio" name="q1" value="FTP" required> FTP
+            </label><br>
+            <label>
+                <input type="radio" name="q1" value="SFTP"> SFTP
+            </label><br>
+            <label>
+                <input type="radio" name="q1" value="HTTP"> HTTP
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>2. Write the IPv6 address abbreviation for 2001:0db8:0000:0000:0000:ff00:0042:8329:</legend>
+            <input type="text" name="q2" placeholder="e.g., 2001:db8::ff00:42:8329" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>3. Drag and drop to match network devices with their purposes:</legend>
+            <div class="drag-drop-container">
+                <div class="draggable" draggable="true" id="device1">Router</div>
+                <div class="draggable" draggable="true" id="device2">Switch</div>
+                <div class="draggable" draggable="true" id="device3">Firewall</div>
+
+                <div class="dropzone" id="zone1">Directs traffic between networks</div>
+                <div class="dropzone" id="zone2">Filters incoming and outgoing traffic</div>
+                <div class="dropzone" id="zone3">Manages devices within the same network</div>
+            </div>
+        </fieldset>
+
+        <fieldset>
+            <legend>4. What is the command to trace the route to a host in a network?</legend>
+            <input type="text" name="q4" placeholder="e.g., traceroute" required>
+        </fieldset>
+
+        <fieldset>
+            <legend>5. Identify the network topology shown in the image:</legend>
+            <img src="topology.jpg" alt="Network Topology" style="max-width: 100%; height: auto;">
+            <label>
+                <input type="radio" name="q5" value="Star" required> Star
+            </label><br>
+            <label>
+                <input type="radio" name="q5" value="Mesh"> Mesh
+            </label><br>
+            <label>
+                <input type="radio" name="q5" value="Bus"> Bus
+            </label>
+        </fieldset>
+
+        <fieldset>
+            <legend>6. Explain the difference between a public IP and a private IP:</legend>
+            <textarea name="q6" rows="3" placeholder="Describe the differences..." required></textarea>
+        </fieldset>
+
+        <div class="form-controls">
+            <button type="button" class="btn" onclick="submitExam('moderateExamForm')">Submit</button>
+            <button type="reset" class="btn">Reset</button>
+        </div>
+    </form>
+
+    <footer>
+        <p>&copy; 2024 Network Exam Platform. All Rights Reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
